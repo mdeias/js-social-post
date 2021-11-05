@@ -63,7 +63,25 @@ const posts = [
 // - Stampiamo i post del nostro feed.
 // - Sotto al nome NON inseire il calcolo della data (es 4 mesi fa) ma la data i formato italiano (GG/MM/AAAA)
 
+
+// destrutturo l'array
+const [post] = posts;
+console.log(post);
+
+// destrutturo l'oggetto
+const {author} = post;
+console.log(author);
+
+// destrutturo l'oggetto annidato per ottenere nome e immagine profilo
+const {name} = author;
+const {image} = author;
+console.log(name);
+console.log(image);
+
+// richiamo la funzione
+
 stampaValori(posts);
+
 
 // creo una funzione che stampa i valori dell'array
 
@@ -85,11 +103,11 @@ function stampaValori(nomeArray) {
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${nomeArray[valore].image}" alt="User image">                    
+                    <img class="profile-pic" src="${image}" alt="User image">                    
                 </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author">${nomeArray[valore].author}</div>
-                    <div class="post-meta__time">4 mesi fa</div>
+                    <div class="post-meta__author">${name}</div>
+                    <div class="post-meta__time">15/05/2021</div>
                 </div>                    
             </div>
         </div>
