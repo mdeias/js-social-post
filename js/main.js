@@ -86,7 +86,10 @@ function stampaValori(nomeArray) {
         const {author} = post;
         // destrutturo l'oggetto annidato
         const {name} = author;
+        console.log(name);
         const {image} = author;
+        console.log(image);
+        
         // creo il box post 
         const boxPost = document.createElement("div");
         // aggiungo la classe post 
@@ -128,5 +131,4 @@ function stampaValori(nomeArray) {
         // appendiamo il tutto al contenitore 
         contenitore.append(boxPost);
     }
-}
-
+} 
